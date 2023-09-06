@@ -13,3 +13,7 @@
 /Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/lab2-project.dll
 /Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/refint/lab2-project.dll
 /Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/lab2-project.pdb
+/Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/AdminPage.xaml.g.cs
+/Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/ImageItem.xaml.g.cs
+/Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/ImageRating.xaml.g.cs
+/Users/yuliayuste/Projects/lab2-project/lab2-project/lab2-project/obj/Debug/netstandard2.0/MenuView.xaml.g.cs

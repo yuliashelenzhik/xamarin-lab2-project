@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lab2project.MenuView">
+    <!-- MenuView content goes here -->
+       <StackLayout Orientation="Horizontal" Background="#a8dadc" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+        <Label Text="✹" TextColor="#1d3557" FontSize="25"  Margin="10, 5, 10, 10" />
+        <Button Text="Admin Page" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2"/>
+        <Button Text="Rating" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2" />
+    </StackLayout>
+</StackLayout>
+
+
+<!--<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="lab2project.MenuView">
+
+    <Label Text="Menu" />
+    <StackLayout Orientation="Horizontal" Background="#a8dadc" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+        <Label Text="✹" TextColor="#1d3557" FontSize="25"  Margin="10, 5, 10, 10" />
+        <Button Text="Admin Page" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2"/>
+        <Button Text="Rating" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2" />
+    </StackLayout>
+   
+</ContentPage>-->
+
