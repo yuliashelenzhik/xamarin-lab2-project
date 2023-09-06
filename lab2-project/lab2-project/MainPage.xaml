@@ -10,8 +10,31 @@
           <StackLayout Margin="10" >
                <Entry Placeholder="Image Name" x:Name="imageNameEntry" PlaceholderColor="#457b9d"/>
         <Entry Placeholder="Image URL" x:Name="imageUrlEntry" PlaceholderColor="#457b9d"/>
-        <Button BackgroundColor="#a8dadc" Text="Add Picture" HorizontalOptions="Start" />
+        <Button TextColor="#1d3557" BackgroundColor="#a8dadc" Text="Add Picture" HorizontalOptions="Start" Clicked="AddPicture"/>
+              <CollectionView x:Name="pictureListView">
+    <CollectionView.ItemsLayout>
+        <GridItemsLayout Orientation="Vertical" Span="3" />
+    </CollectionView.ItemsLayout>
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="5">
+                <!-- Your image or content goes here -->
+                <RadioButton IsChecked="{Binding IsSelected}" CheckedChanged="RadioButton_CheckedChanged" />
+                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" />
+                <Label Text="{Binding Name}" TextColor="#457b9d" HorizontalOptions="Center" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+              <!--<ListView x:Name="pictureListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
 
+                    <TextCell TextColor="#457b9d"  Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+              <Button BackgroundColor="#e63946" TextColor="#f1faee" Text="Delete" Clicked="DeleteSelected" HorizontalOptions="Start" />
           </StackLayout>
 
 
