@@ -5,8 +5,8 @@
     <!-- MenuView content goes here -->
        <StackLayout Orientation="Horizontal" Background="#a8dadc" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
         <Label Text="✹" TextColor="#1d3557" FontSize="25"  Margin="10, 5, 10, 10" />
-        <Button Text="Admin Page" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2"/>
-        <Button Text="Rating" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2" />
+        <Button Text="Admin Page" Clicked="Goto_Admin" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2"/>
+        <Button Text="Rating" Clicked="Goto_Rating" Background="#a8dadc" TextColor="#1d3557" FontAttributes="Bold" CharacterSpacing="2" />
     </StackLayout>
 </StackLayout>
 

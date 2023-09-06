@@ -2,9 +2,11 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:lab2project"
     x:Class="lab2project.ImageRating">
     <ContentPage.Content>
         <StackLayout>
+              <local:MenuView />
             <Label Text="Rating Page" FontSize="30" TextColor="#1d3557"/>
         </StackLayout>
     </ContentPage.Content>
