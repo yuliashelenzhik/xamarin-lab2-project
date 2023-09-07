@@ -18,9 +18,13 @@
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <StackLayout Padding="5">
+                  <StackLayout.GestureRecognizers>
+        <TapGestureRecognizer Tapped="Image_Tapped" />
+    </StackLayout.GestureRecognizers>
                 <!-- Your image or content goes here -->
                 <RadioButton IsChecked="{Binding IsSelected}" CheckedChanged="RadioButton_CheckedChanged" />
-                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" />
+                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+
                 <Label Text="{Binding Name}" TextColor="#457b9d" HorizontalOptions="Center" />
             </StackLayout>
         </DataTemplate>

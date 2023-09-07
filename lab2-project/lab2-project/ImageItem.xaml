@@ -2,11 +2,34 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:lab2project"
     x:Class="lab2project.ImageItem">
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Each Image Item Page" />
+            <local:MenuView/>
+        <StackLayout Margin="10">
+             <Image Source="{Binding ImageUrl}" Aspect="AspectFill"/>
+
+                <Label Text="{Binding Name}" TextColor="#1d3557" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+
+            <Grid HorizontalOptions="Center" Margin="0, 10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="👍" Grid.Column="0" FontSize="Large" />
+                 <Label Text="3" Grid.Column="1" FontSize="Large" TextColor="#457b9d" FontAttributes="Bold"/>
+            <Label Text="👎" Grid.Column="2" FontSize="Large" Margin="20,0,0,0"/>
+            <Label Text="1" Grid.Column="3" FontSize="Large" TextColor="#457b9d" FontAttributes="Bold"/>
+
+        </Grid>
         </StackLayout>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
 

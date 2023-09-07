@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using lab2project.Models;
 using Xamarin.Forms;
+using lab2project;
 
 namespace lab2_project
 {
@@ -69,23 +70,19 @@ namespace lab2_project
             }
         }
 
-        //private void DeleteSelected(object sender, EventArgs e)
-        //{
-        //    if (selectedPicture != null)
-        //    {
-        //        // Remove the selected picture from the collection
-        //        pictures.Remove(selectedPicture);
-        //        selectedPicture = null;
-        //    }
-        //}
+        private async void Image_Tapped(object sender, EventArgs e)
+        {
+            // Handle the StackLayout click event here
+            var stackLayout = (StackLayout)sender;
+            var picture = (PictureModel)stackLayout.BindingContext;
 
-        //private void pictureListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        //{
-        //    if (e.Item is PictureModel selected)
-        //    {
-        //        selectedPicture = selected;
-        //    }
-        //}
+            // Perform the desired action, e.g., navigate to a new page with picture details
+            await Navigation.PushAsync(new ImageItem
+            {
+                BindingContext = picture
+            });
+        }
+
 
 
     }
