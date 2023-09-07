@@ -16,13 +16,13 @@ namespace lab2project
         private void Liked(object sender, EventArgs e)
         {
             var picture = (PictureWithLikesAndDislikes)((Button)sender).BindingContext;
-            picture.Likes++; // Increment the likes count
+            picture.Likes++; 
         }
 
         private void Disliked(object sender, EventArgs e)
         {
             var picture = (PictureWithLikesAndDislikes)((Button)sender).BindingContext;
-            picture.Dislikes++; // Increment the dislikes count
+            picture.Dislikes++; 
         }
     }
 }

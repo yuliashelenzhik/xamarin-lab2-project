@@ -21,7 +21,7 @@
                   <StackLayout.GestureRecognizers>
         <TapGestureRecognizer Tapped="Image_Tapped" />
     </StackLayout.GestureRecognizers>
-                <!-- Your image or content goes here -->
+  
                 <RadioButton IsChecked="{Binding IsSelected}" CheckedChanged="RadioButton_CheckedChanged" />
                 <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
 
@@ -30,14 +30,7 @@
         </DataTemplate>
     </CollectionView.ItemTemplate>
 </CollectionView>
-              <!--<ListView x:Name="pictureListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-
-                    <TextCell TextColor="#457b9d"  Text="{Binding Name}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
+         
               <Button BackgroundColor="#e63946" TextColor="#f1faee" Text="Delete" Clicked="DeleteSelected" HorizontalOptions="Start" />
           </StackLayout>
 

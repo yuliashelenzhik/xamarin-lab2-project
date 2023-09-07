@@ -24,14 +24,13 @@ namespace lab2_project
 
         private void AddPicture(object sender, EventArgs e)
         {
-            // Get values from the entry fields
             string imageName = imageNameEntry.Text;
             string imageUrl = imageUrlEntry.Text;
 
-            // Create a new PictureModel and add it to the collection
+           
             pictures.Add(new PictureWithLikesAndDislikes { Id = pictures.Count + 1, Name = imageName, ImageUrl = imageUrl });
 
-            // Clear the entry fields
+           
             imageNameEntry.Text = imageUrlEntry.Text = string.Empty;
 
 
@@ -44,16 +43,14 @@ namespace lab2_project
 
             if (e.Value)
             {
-                // Picture is selected
+             
                 selectedPicture = picture;
             }
             else
             {
-                // Picture is deselected
                 selectedPicture = null;
             }
 
-            // Uncheck other radio buttons
             foreach (var item in pictures)
             {
                 if (item != picture)
@@ -74,11 +71,10 @@ namespace lab2_project
 
         private async void Image_Tapped(object sender, EventArgs e)
         {
-            // Handle the StackLayout click event here
+
             var stackLayout = (StackLayout)sender;
             var picture = (PictureWithLikesAndDislikes)stackLayout.BindingContext;
 
-            // Perform the desired action, e.g., navigate to a new page with picture details
             await Navigation.PushAsync(new ImageItem
             {
                 BindingContext = picture
