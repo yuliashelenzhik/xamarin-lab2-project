@@ -37,6 +37,23 @@ namespace lab2project.Models
             Likes = 0; // Initialize Likes to 0
             Dislikes = 0; // Initialize Dislikes to 0
         }
+
+        //private int rowNumber;
+        //public int RowNumber
+        //{
+        //    get { return rowNumber; }
+        //    set
+        //    {
+        //        if (rowNumber != value)
+        //        {
+        //            rowNumber = value;
+        //            OnPropertyChanged();
+        //        }
+        //    }
+        //}
+
+
+
     }
 }
 

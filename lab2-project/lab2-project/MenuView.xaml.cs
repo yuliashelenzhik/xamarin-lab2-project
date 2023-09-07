@@ -4,13 +4,13 @@ using lab2project;
 using Xamarin.Forms;
 
 namespace lab2project
-{	
-	public partial class MenuView : StackLayout
-	{	
-		public MenuView ()
-		{
-			InitializeComponent ();
-		}
+{
+    public partial class MenuView : StackLayout
+    {
+        public MenuView()
+        {
+            InitializeComponent();
+        }
 
         private async void Goto_Rating(object sender, EventArgs e)
         {
@@ -25,4 +25,3 @@ namespace lab2project
         }
     }
 }
-

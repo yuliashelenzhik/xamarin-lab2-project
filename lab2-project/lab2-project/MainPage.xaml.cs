@@ -13,7 +13,7 @@ namespace lab2_project
 {
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<PictureWithLikesAndDislikes> pictures = new ObservableCollection<PictureWithLikesAndDislikes>();
+        public ObservableCollection<PictureWithLikesAndDislikes> pictures = new ObservableCollection<PictureWithLikesAndDislikes>();
         private PictureWithLikesAndDislikes selectedPicture;
 
         public MainPage()
@@ -33,6 +33,8 @@ namespace lab2_project
 
             // Clear the entry fields
             imageNameEntry.Text = imageUrlEntry.Text = string.Empty;
+
+
         }
 
         private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
@@ -88,4 +90,3 @@ namespace lab2_project
     }
 
 }
-
