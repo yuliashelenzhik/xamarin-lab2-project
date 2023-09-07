@@ -13,8 +13,8 @@ namespace lab2_project
 {
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<PictureModel> pictures = new ObservableCollection<PictureModel>();
-        private PictureModel selectedPicture;
+        private ObservableCollection<PictureWithLikesAndDislikes> pictures = new ObservableCollection<PictureWithLikesAndDislikes>();
+        private PictureWithLikesAndDislikes selectedPicture;
 
         public MainPage()
         {
@@ -29,7 +29,7 @@ namespace lab2_project
             string imageUrl = imageUrlEntry.Text;
 
             // Create a new PictureModel and add it to the collection
-            pictures.Add(new PictureModel { Id = pictures.Count + 1, Name = imageName, ImageUrl = imageUrl });
+            pictures.Add(new PictureWithLikesAndDislikes { Id = pictures.Count + 1, Name = imageName, ImageUrl = imageUrl });
 
             // Clear the entry fields
             imageNameEntry.Text = imageUrlEntry.Text = string.Empty;
@@ -38,7 +38,7 @@ namespace lab2_project
         private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var radioButton = (RadioButton)sender;
-            var picture = (PictureModel)radioButton.BindingContext;
+            var picture = (PictureWithLikesAndDislikes)radioButton.BindingContext;
 
             if (e.Value)
             {
@@ -74,7 +74,7 @@ namespace lab2_project
         {
             // Handle the StackLayout click event here
             var stackLayout = (StackLayout)sender;
-            var picture = (PictureModel)stackLayout.BindingContext;
+            var picture = (PictureWithLikesAndDislikes)stackLayout.BindingContext;
 
             // Perform the desired action, e.g., navigate to a new page with picture details
             await Navigation.PushAsync(new ImageItem
