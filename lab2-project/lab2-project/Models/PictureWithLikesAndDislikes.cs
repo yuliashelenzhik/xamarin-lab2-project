@@ -5,6 +5,7 @@ namespace lab2project.Models
     {
         private int likes;
         private int dislikes;
+        public string ImageFilePath { get; set; }
 
         public int Likes
         {
@@ -38,6 +39,7 @@ namespace lab2project.Models
             Dislikes = 0; 
         }
 
+        
 
     }
 }

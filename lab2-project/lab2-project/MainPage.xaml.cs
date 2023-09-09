@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using lab2project.Models;
 using Xamarin.Forms;
 using lab2project;
+using Xamarin.Essentials;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http;
 
 namespace lab2_project
 {
@@ -22,19 +26,57 @@ namespace lab2_project
             pictureListView.ItemsSource = pictures;
         }
 
-        private void AddPicture(object sender, EventArgs e)
+        private async void AddPicture(object sender, EventArgs e)
         {
+           
             string imageName = imageNameEntry.Text;
             string imageUrl = imageUrlEntry.Text;
 
-           
-            pictures.Add(new PictureWithLikesAndDislikes { Id = pictures.Count + 1, Name = imageName, ImageUrl = imageUrl });
+            string imageFileName = Guid.NewGuid().ToString(); 
+            string imageFilePath = await SaveImageToLocalFolder(imageUrl, imageFileName);
+
+            var newPicture = new PictureWithLikesAndDislikes
+            {
+                Id = pictures.Count + 1,
+                Name = imageName,
+                ImageUrl = imageUrl,
+                ImageFilePath = imageFilePath 
+            };
+
+            pictures.Add(newPicture);
+            //pictures.Add(new PictureWithLikesAndDislikes { Id = pictures.Count + 1, Name = imageName, ImageUrl = imageUrl });
 
            
             imageNameEntry.Text = imageUrlEntry.Text = string.Empty;
 
+            //await DisplayAlert("Picture Added", "A new picture has been added.", "OK");
 
         }
+
+        private async Task<string> SaveImageToLocalFolder(string imageUrl, string fileName)
+        {
+            byte[] imageBytes = await DownloadImageAsync(imageUrl);
+
+            string folderPath = FileSystem.AppDataDirectory;
+
+            string filePath = Path.Combine(folderPath, fileName);
+
+            File.WriteAllBytes(filePath, imageBytes);
+
+            await DisplayAlert("SAVED", "Saved to LOCAL STORAGE", "OK");
+
+            return filePath;
+        }
+
+        private async Task<byte[]> DownloadImageAsync(string imageUrl)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                return await httpClient.GetByteArrayAsync(imageUrl);
+            }
+        }
+
+
 
         private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
@@ -80,8 +122,6 @@ namespace lab2_project
                 BindingContext = picture
             });
         }
-
-
 
     }
 

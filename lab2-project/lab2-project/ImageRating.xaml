@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" Margin="10,0" VerticalOptions="Center"/>
-                <Image Grid.Row="0" Grid.Column="1" Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="75" WidthRequest="75"/>
+                <Image Grid.Row="0" Grid.Column="1" Source="{Binding ImageFilePath}" Aspect="AspectFill" HeightRequest="75" WidthRequest="75"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="👍" TextColor="#457b9d" HorizontalOptions="Center" Margin="10,0"  VerticalOptions="Center"/>
                 <Label Grid.Row="0" Grid.Column="3" Text="{Binding Likes}" TextColor="#457b9d" HorizontalOptions="Center" VerticalOptions="Center"/>
                 <Label Grid.Row="0" Grid.Column="4" Text="👎" TextColor="#457b9d" HorizontalOptions="Center" Margin="20,0,10,0"  VerticalOptions="Center"/>

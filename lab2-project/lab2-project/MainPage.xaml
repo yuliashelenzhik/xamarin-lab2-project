@@ -23,7 +23,7 @@
     </StackLayout.GestureRecognizers>
   
                 <RadioButton IsChecked="{Binding IsSelected}" CheckedChanged="RadioButton_CheckedChanged" />
-                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                <Image Source="{Binding ImageFilePath}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
 
                 <Label Text="{Binding Name}" TextColor="#457b9d" HorizontalOptions="Center" />
             </StackLayout>
